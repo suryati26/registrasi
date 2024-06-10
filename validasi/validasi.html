@@ -1,0 +1,41 @@
+	
+<form name="form1" id="form1" action="" method="post" />
+<dl>
+  <dt>First Name</dt>
+  <dd><input name="firstName" id="firstName" type="text" /></dd>
+  <dt>Last Name</dt>
+  <dd><input name="lastName" id="lastName" type="text" /></dd>
+  <dt>Email</dt>
+  <dd><input name="email" id="email" type="text" /></dd>
+  <dt>Phone</dt>
+  <dd><input name="phone" id="phone" type="text" /></dd>
+  <dt></dt>
+  <dd><input type="button" name="save" id="save" value="Save" onclick="saveForm(); return false;" /></dd>
+</dl>
+</form>
+ 
+<script type="text/javascript">
+  function saveForm(){
+    if(document.getElementById('firstName').value == ''){
+      alert('First Name tidak boleh kosong');
+      document.getElementById('firstName').focus();
+      return false;
+    }
+    if(document.getElementById('lastName').value == ''){
+      alert('Last Name tidak boleh kosong');
+      document.getElementById('lastName').focus();
+      return false;
+    }
+    if(document.getElementById('email').value == ''){
+      alert('Email tidak boleh kosong');
+      document.getElementById('email').focus();
+      return false;
+    }
+    if(document.getElementById('phone').value == ''){
+      alert('Phone tidak boleh kosong');
+      document.getElementById('phone').focus();
+      return false;
+    }
+    document.getElementById('form1').submit();
+  }
+</script>
