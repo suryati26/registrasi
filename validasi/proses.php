@@ -7,7 +7,6 @@ $peraturan = [
     'email' => ['required'],
     'username' => ['required'],
     'usia' => ['required'],
-    'website' => ['required']
 ];
 
 validasi($peraturan);
